@@ -8,7 +8,7 @@ const Calculator = {
 
 //Function that modifies values each time a button is clicked on
 function Input_Digit(digit){
-    const{Display_Value, Wait_Second_Operand,} = Calculator;
+    const {Display_Value, Wait_Second_Operand} = Calculator;
     if (Wait_Second_Operand === true){
         Calculator.Display_Value = digit;
         Calculator.Wait_Second_Operand = false;
@@ -74,7 +74,7 @@ function Update_Display(){
 Update_Display();
 
 //Section to monitor button clicks
-const keys = document.querySelector('calculator-keys');
+const keys = document.querySelector('.calculator-keys');
 keys.addEventListener('click', (event) => {
     const{target} = event;
     if (!target.matches('button')){
